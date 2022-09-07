@@ -1,0 +1,14 @@
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    margin: 16rem 0rem;
+}
+
+#play-game-button {
+    width: 20%;
+    height: 30px;
+}
