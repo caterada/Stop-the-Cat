@@ -4,11 +4,31 @@
     align-items: center;
 }
 
+p {
+    padding: 1rem 0rem;
+}
+
 #title {
     margin: 16rem 0rem;
 }
 
 #play-game-button {
     width: 20%;
-    height: 30px;
+    height: 2.6rem;
+}
+
+#game-rules-title {
+    margin: 10rem;
+}
+
+#game-rules-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 30rem;
+}
+
+#start-button {
+    width: 10%;
+    height: 2.6rem;
+    margin: 5rem 0 0 0;
 }
