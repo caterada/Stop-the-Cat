@@ -24,7 +24,9 @@ p {
 #game-rules-text {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     max-width: 30rem;
+    padding: 0rem 2rem;
 }
 
 #start-button {
