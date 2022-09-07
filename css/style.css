@@ -50,9 +50,6 @@ p {
 }
 
 /* game specific css */
-.game-layout {
-
-}
 
 .game-layout-bottom {
     display: flex;
@@ -78,6 +75,9 @@ p {
     flex-grow: 0.75;
 }
 
+.keyboard-key {
+    padding: 1rem;
+}
 
 .game-button {
     display: flex;
