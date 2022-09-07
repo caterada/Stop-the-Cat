@@ -10,7 +10,38 @@ console.log(wordList);
 /*----- app's state (variables) -----*/
 //randomCorrectWord (object)
 let randomCorrectWord = pickRandomWord();
-console.log(randomCorrectWord);
+let CorrectWordArray = randomCorrectWord.split('');
+
+class CorrectWordClass {
+	constructor(
+		firstLetter,
+		secondLetter,
+		thirdLetter,
+		fourthLetter,
+		fifthLetter,
+		sixthLetter
+	) {
+		this.firstLetter = firstLetter;
+		this.secondLetter = secondLetter;
+		this.thirdLetter = thirdLetter;
+		this.fourthLetter = fourthLetter;
+		this.fifthLetter = fifthLetter;
+		this.sixthLetter = sixthLetter;
+	}
+}
+
+//find a way to code this better, how can I shorten to pass each index of an array using the array length instead of typing it out?
+let CorrectWordObject = new CorrectWordClass(
+	CorrectWordArray[0],
+	CorrectWordArray[1],
+	CorrectWordArray[2],
+	CorrectWordArray[3],
+	CorrectWordArray[4],
+	CorrectWordArray[5],
+	CorrectWordArray[6]
+);
+
+console.log(CorrectWordObject);
 
 /*----- cached element references -----*/
 //correctLettersGuessed
@@ -37,3 +68,8 @@ function pickRandomWord() {
 	let i = Math.floor(Math.random() * wordList.length);
 	return wordList[i];
 }
+
+//make random word into array
+// function createArray() {
+//    randomCorrectWord.split('')
+//     }
