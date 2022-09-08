@@ -6,31 +6,41 @@ const restartButton = document.querySelector('#restart-button');
 
 const wordList = ['apple', 'forgot', 'listen'];
 
-//the div with class .keyboard-input
-const keyboardPlacement = document.querySelector('.keyboard-input');
-
-//create keyboard button with ID of A and innertext of A
-const keyboardButton = document.createElement('button');
-keyboardButton.innerText = 'A'; //change to function
-keyboardButton.id = 'A'; //change to function
-keyboardButton.addEventListener('click', function () {
-	alert('clicked button A');
-});
-
-//create element div with class .keyboard-letter
-const letterID = document.createElement('div');
-letterID.classList.add('keyboard-letter');
-keyboardPlacement.appendChild(letterID).appendChild(keyboardButton);
-
-/*----- app's state (variables) -----*/
-//randomCorrectWord (object)
-let randomCorrectWord = pickRandomWord();
-let CorrectWordArray = randomCorrectWord.split('');
+const imageCat = document.querySelector('.image-cat');
 
 //keyboard values
 let keyValues = 'qwertyuiopasdfghjklzxcvbnm';
 let arrayOfKeys = keyValues.split('');
 
+for (let i = 0; i < arrayOfKeys.length; i++) {
+	//create keyboard button with ID of A and innertext of A
+	//the div with class .keyboard-input
+	const keyboardPlacement = document.querySelector('.keyboard-input');
+	const keyboardButton = document.createElement('button');
+	keyboardButton.type = 'button';
+	keyboardButton.innerText = arrayOfKeys[i];
+	keyboardButton.id = arrayOfKeys[i];
+	keyboardButton.style.width = '2rem';
+	keyboardButton.style.height = '2rem';
+	keyboardButton.addEventListener('click', clickButton);
+	//create element div with class .keyboard-letter
+	const letterID = document.createElement('div');
+	letterID.classList.add('keyboard-letter');
+
+	//put div of .keyboard-letter under .keyboard-input
+	let eachKey = keyboardPlacement.appendChild(letterID);
+	eachKey.appendChild(keyboardButton);
+
+	// //try to put in a break after p, l, and m
+	// if (arrayOfKeys[i] === 'p') {
+	// 	eachKey.appendChild(document.createElement('br'));
+	// }
+}
+
+/*----- app's state (variables) -----*/
+//randomCorrectWord (object)
+let randomCorrectWord = pickRandomWord();
+let CorrectWordArray = randomCorrectWord.split('');
 class CorrectWordClass {
 	constructor(
 		firstLetter,
@@ -49,7 +59,7 @@ class CorrectWordClass {
 	}
 }
 
-//find a way to code this better, how can I shorten to pass each index of an array using the array length instead of typing it out? for loop?
+// find a way to code this better, how can I shorten to pass each index of an array using the array length instead of typing it out? for loop?
 let CorrectWordObject = new CorrectWordClass(
 	CorrectWordArray[0],
 	CorrectWordArray[1],
@@ -98,3 +108,15 @@ function pickRandomWord() {
 	let i = Math.floor(Math.random() * wordList.length);
 	return wordList[i];
 }
+
+//if button ID = a letter in the array of correct word, replace innertext with that letter. if not, move the incorrect counter up (image changes)
+function clickButton() {
+	// let CorrectWordArray = randomCorrectWord.split('');
+	// let keyEle = document.getElementById(i)
+	if (CorrectWordArray.includes(this.innerText)) {
+		//replace 1 - 6 with innerText that matches
+	}
+}
+
+// function guessLetter () {
+// }

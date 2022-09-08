@@ -51,6 +51,7 @@ p {
 
 /* game specific css */
 
+/* container of keyboard buttons + restart buttons */
 .game-layout-bottom {
     display: flex;
     flex-direction: row;
@@ -71,21 +72,19 @@ p {
 }
 
 /* unsure if this is how to make the keyboard container smaller */
+/* container of the keyboard */
 .keyboard-input {
-    flex-basis: 100em;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100rem;
     flex-grow: 0.75;
 }
 
-.keyboard-key {
-    padding: 1rem;
+/* keyboard button class */
+.keyboard-letter {
+    padding: 0.1rem;
+    /* flex-shrink: 0.25; */
 }
-
-/* .game-button {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    flex-shrink: 0.25;
-} */
 
 .image-cat {
     margin: 3rem 5rem;
