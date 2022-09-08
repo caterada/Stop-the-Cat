@@ -78,6 +78,8 @@ p {
     flex-direction: row;
     flex-basis: 100rem;
     flex-grow: 0.75;
+    flex-wrap: wrap;
+    margin: 1rem;
 }
 
 /* keyboard button class */
@@ -92,4 +94,5 @@ p {
 
 #restart-button {
     padding: 0.2rem 1rem;
+    margin: 1rem 1rem 1rem 0rem;
 }
