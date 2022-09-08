@@ -20,6 +20,7 @@ let keyValues = 'qwertyuiopasdfghjklzxcvbnm';
 let arrayOfKeys = keyValues.split('');
 
 let counter = 0;
+let guessedCount = 0;
 
 for (let i = 0; i < arrayOfKeys.length; i++) {
 	//create keyboard button with ID of A and innertext of A
@@ -107,38 +108,43 @@ function pickRandomWord() {
 
 //if button ID = a letter in the array of correct word, replace innertext with that letter. if not, move the incorrect counter up (image changes)
 function clickButton() {
-	if (randomCorrectWord.includes(this.innerText)) {
-		//make for loop later
-		if (CorrectWordArray[0] === this.innerText) {
-			//replace 1 - 6 with innerText that matches
-			letterOne.innerHTML = this.innerText;
+	if (counter < 6) {
+		if (randomCorrectWord.includes(this.innerText)) {
+			//make for loop later
+			if (CorrectWordArray[0] === this.innerText) {
+				letterOne.innerHTML = this.innerText;
+				guessedCount += 1;
+			}
+			if (CorrectWordArray[1] === this.innerText) {
+				letterTwo.innerHTML = this.innerText;
+				guessedCount += 1;
+			}
+			if (CorrectWordArray[2] === this.innerText) {
+				letterThree.innerHTML = this.innerText;
+				guessedCount += 1;
+			}
+			if (CorrectWordArray[3] === this.innerText) {
+				letterFour.innerHTML = this.innerText;
+				guessedCount += 1;
+			}
+			if (CorrectWordArray[4] === this.innerText) {
+				letterFive.innerHTML = this.innerText;
+				guessedCount += 1;
+			}
+			if (CorrectWordArray[5] === this.innerText) {
+				letterSix.innerHTML = this.innerText;
+				guessedCount += 1;
+			}
+		} else {
+			counter += 1;
+			counterAdd();
 		}
-		if (CorrectWordArray[1] === this.innerText) {
-			//replace 1 - 6 with innerText that matches
-			letterTwo.innerHTML = this.innerText;
-		}
-		if (CorrectWordArray[2] === this.innerText) {
-			//replace 1 - 6 with innerText that matches
-			letterThree.innerHTML = this.innerText;
-		}
-		if (CorrectWordArray[3] === this.innerText) {
-			//replace 1 - 6 with innerText that matches
-			letterFour.innerHTML = this.innerText;
-		}
-		if (CorrectWordArray[4] === this.innerText) {
-			//replace 1 - 6 with innerText that matches
-			letterFive.innerHTML = this.innerText;
-		}
-		if (CorrectWordArray[5] === this.innerText) {
-			//replace 1 - 6 with innerText that matches
-			letterSix.innerHTML = this.innerText;
-		}
-	} else {
-		counter += 1;
-		counterAdd();
-		if (counter === 6) {
-			setTimeout(displayLosePage, '6000');
-		}
+	}
+	if (counter >= 6) {
+		setTimeout(displayLosePage, '6000');
+	}
+	if (guessedCount === 6) {
+		displayWinPage();
 	}
 }
 
