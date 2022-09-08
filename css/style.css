@@ -70,7 +70,8 @@ p {
     background-color: white;
 }
 
-.keyboard {
+/* unsure if this is how to make the keyboard container smaller */
+.keyboard-input {
     flex-basis: 100em;
     flex-grow: 0.75;
 }
@@ -79,12 +80,12 @@ p {
     padding: 1rem;
 }
 
-.game-button {
+/* .game-button {
     display: flex;
     flex-direction: column;
     padding: 2rem;
     flex-shrink: 0.25;
-}
+} */
 
 .image-cat {
     margin: 3rem 5rem;
