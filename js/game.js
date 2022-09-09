@@ -11,6 +11,16 @@
 
 /*----- constants -----*/
 const restartButton = document.querySelector('#restart-button');
+const imageCat = document.querySelector('#image-cat-counter');
+const letterOne = document.querySelector('#letter-01');
+const letterTwo = document.querySelector('#letter-02');
+const letterThree = document.querySelector('#letter-03');
+const letterFour = document.querySelector('#letter-04');
+const letterFive = document.querySelector('#letter-05');
+const letterSix = document.querySelector('#letter-06');
+
+/*----- app's state (variables) -----*/
+//keyboard values
 let wordList = [
 	'Better',
 	'Beyond',
@@ -469,25 +479,18 @@ wordList = wordList.map(function (word) {
 	return word.toUpperCase();
 });
 
-const imageCat = document.querySelector('#image-cat-counter');
-const letterOne = document.querySelector('#letter-01');
-const letterTwo = document.querySelector('#letter-02');
-const letterThree = document.querySelector('#letter-03');
-const letterFour = document.querySelector('#letter-04');
-const letterFive = document.querySelector('#letter-05');
-const letterSix = document.querySelector('#letter-06');
-
-//keyboard values
-let keyValues = 'QWERTYUIOPASDFGHJKLZXCVBNM';
-let arrayOfKeys = keyValues.split('');
-
+//counters
 let counter = 0;
 let correctGuessCount = 0;
 
+//keyboard
+let keyValues = 'QWERTYUIOPASDFGHJKLZXCVBNM';
+let arrayOfKeys = keyValues.split('');
+
 for (let i = 0; i < arrayOfKeys.length; i++) {
 	//the div with class .keyboard-input
-	const keyboardPlacement = document.querySelector('.keyboard-input');
-	const keyboardButton = document.createElement('button');
+	let keyboardPlacement = document.querySelector('.keyboard-input');
+	let keyboardButton = document.createElement('button');
 	keyboardButton.type = 'button';
 	keyboardButton.innerText = arrayOfKeys[i];
 	keyboardButton.id = arrayOfKeys[i];
@@ -495,20 +498,22 @@ for (let i = 0; i < arrayOfKeys.length; i++) {
 	keyboardButton.style.height = '2rem';
 	keyboardButton.addEventListener('click', clickButton);
 	//create element div with class .keyboard-letter
-	const letterID = document.createElement('div');
-	letterID.classList.add('keyboard-letter');
+	let createKeyDiv = document.createElement('div');
+	createKeyDiv.classList.add('keyboard-letter');
 
 	//put div of .keyboard-letter under .keyboard-input
-	let eachKey = keyboardPlacement.appendChild(letterID);
+	let eachKey = keyboardPlacement.appendChild(createKeyDiv);
 	eachKey.appendChild(keyboardButton);
 
-	// //try to put in a break after p, l, and m
-	// if (arrayOfKeys[i] === 'p') {
-	// 	eachKey.appendChild(document.createElement('br'));
-	// }
+	//try to put in a break after p, l, and m
+	if (arrayOfKeys[i] == 'P' || arrayOfKeys[i] == 'L' || arrayOfKeys[i] == 'M') {
+		let createBreakDiv = document.createElement('div');
+		createBreakDiv.classList.add('break');
+		let keyboardInputClass = document.querySelector('.keyboard-input');
+		keyboardInputClass.appendChild(createBreakDiv);
+	}
 }
 
-/*----- app's state (variables) -----*/
 //randomCorrectWord (object)
 let randomCorrectWord = pickRandomWord();
 let CorrectWordArray = randomCorrectWord.split('');
@@ -530,7 +535,6 @@ class CorrectWordClass {
 	}
 }
 
-// find a way to code this better, how can I shorten to pass each index of an array using the array length instead of typing it out? for loop?
 let CorrectWordObject = new CorrectWordClass(
 	CorrectWordArray[0],
 	CorrectWordArray[1],
@@ -540,8 +544,6 @@ let CorrectWordObject = new CorrectWordClass(
 	CorrectWordArray[5],
 	CorrectWordArray[6]
 );
-
-/*----- cached element references -----*/
 
 /*----- event listeners -----*/
 restartButton.addEventListener('click', restartGame);
@@ -639,4 +641,15 @@ function displayWinPage() {
 	document.location.href = '/win.html';
 }
 
+// function insertBR() {
+// 	for (let i = 0; i < arrayOfKeys.length; i++) {
+// 		if (arrayOfKeys[i] == 'P') {
+// 			let createBR = document.createElement('br');
+// 			keyboardLetterClass.appendChild(createBR);
+// 		}
+// 	}
+// }
+
+//delete later
 console.log(randomCorrectWord);
+console.log(arrayOfKeys[9]);

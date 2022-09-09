@@ -84,23 +84,27 @@ p {
     margin: 0.2rem;
     padding: 2.2rem 2rem;
     background-color: white;
+    font-size: 2rem;
 }
 
-/* unsure if this is how to make the keyboard container smaller */
 /* container of the keyboard */
 .keyboard-input {
     display: flex;
     flex-direction: row;
-    flex-basis: 100rem;
-    flex-grow: 0.75;
+    justify-content: center;
     flex-wrap: wrap;
     margin: 1rem;
+}
+
+/* keyboard line break */
+.break {
+    flex-basis: 100%;
+    height: 0.2rem;
 }
 
 /* keyboard button class */
 .keyboard-letter {
     padding: 0.1rem;
-    /* flex-shrink: 0.25; */
 }
 
 .image-cat {
