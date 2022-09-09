@@ -493,6 +493,7 @@ for (let i = 0; i < arrayOfKeys.length; i++) {
 	let keyboardButton = document.createElement('button');
 	keyboardButton.type = 'button';
 	keyboardButton.innerText = arrayOfKeys[i];
+	keyboardButton.classList = 'keyboardButtonClass';
 	keyboardButton.id = arrayOfKeys[i];
 	keyboardButton.style.width = '2rem';
 	keyboardButton.style.height = '2rem';
