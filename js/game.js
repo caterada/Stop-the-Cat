@@ -1,13 +1,18 @@
+//put more words in word list
+//adjust keys to all caps
+//change key to red when incorrectly pressed
+//green when correct
+//create new images
+//align buttons correctly
+//make play again button
+//put break in the keyboard layout
+//put timer on win condition
+//make sure restart game button works correctly and is refreshing through words
+
 /*----- constants -----*/
-//let correctLettersGuessed = 0
-//let incorrectLettersGuessed = 0
 const restartButton = document.querySelector('#restart-button');
-//each letter
-
 const wordList = ['apples', 'forgot', 'listen'];
-
 const imageCat = document.querySelector('#image-cat-counter');
-
 const letterOne = document.querySelector('#letter-01');
 const letterTwo = document.querySelector('#letter-02');
 const letterThree = document.querySelector('#letter-03');
@@ -20,10 +25,9 @@ let keyValues = 'qwertyuiopasdfghjklzxcvbnm';
 let arrayOfKeys = keyValues.split('');
 
 let counter = 0;
-let guessedCount = 0;
+let correctGuessCount = 0;
 
 for (let i = 0; i < arrayOfKeys.length; i++) {
-	//create keyboard button with ID of A and innertext of A
 	//the div with class .keyboard-input
 	const keyboardPlacement = document.querySelector('.keyboard-input');
 	const keyboardButton = document.createElement('button');
@@ -81,21 +85,11 @@ let CorrectWordObject = new CorrectWordClass(
 );
 
 /*----- cached element references -----*/
-//correctLettersGuessed
-//incorrectLettersGuessed
 
 /*----- event listeners -----*/
-//when Restart button is clicked, refresh cache (refreshing page atm)
 restartButton.addEventListener('click', restartGame);
-//when letter is pressed, run function
 
 /*----- functions -----*/
-
-//if correct, change letter-button to green, run function for putting letter in correct blank spot
-
-//if incorrect, change letter-button to red, run function to move cat up 1 flight of stairs (change image)
-//if all blanks are filled, set a timer of 1sec and change page to win.html
-
 function restartGame() {
 	//enter function code here to reset all the values
 	location.reload();
@@ -110,30 +104,30 @@ function pickRandomWord() {
 function clickButton() {
 	if (counter < 6) {
 		if (randomCorrectWord.includes(this.innerText)) {
-			//make for loop later
+			//could be a for loop?
 			if (CorrectWordArray[0] === this.innerText) {
 				letterOne.innerHTML = this.innerText;
-				guessedCount += 1;
+				correctGuessCount += 1;
 			}
 			if (CorrectWordArray[1] === this.innerText) {
 				letterTwo.innerHTML = this.innerText;
-				guessedCount += 1;
+				correctGuessCount += 1;
 			}
 			if (CorrectWordArray[2] === this.innerText) {
 				letterThree.innerHTML = this.innerText;
-				guessedCount += 1;
+				correctGuessCount += 1;
 			}
 			if (CorrectWordArray[3] === this.innerText) {
 				letterFour.innerHTML = this.innerText;
-				guessedCount += 1;
+				correctGuessCount += 1;
 			}
 			if (CorrectWordArray[4] === this.innerText) {
 				letterFive.innerHTML = this.innerText;
-				guessedCount += 1;
+				correctGuessCount += 1;
 			}
 			if (CorrectWordArray[5] === this.innerText) {
 				letterSix.innerHTML = this.innerText;
-				guessedCount += 1;
+				correctGuessCount += 1;
 			}
 		} else {
 			counter += 1;
@@ -143,7 +137,7 @@ function clickButton() {
 	if (counter >= 6) {
 		setTimeout(displayLosePage, '6000');
 	}
-	if (guessedCount === 6) {
+	if (correctGuessCount === 6) {
 		displayWinPage();
 	}
 }
@@ -187,8 +181,3 @@ function displayLosePage() {
 function displayWinPage() {
 	document.location.href = '/win.html';
 }
-
-// CONSOLE LOG CHECKS
-console.log(wordList);
-console.log(CorrectWordObject);
-console.log(counter);

@@ -19,10 +19,24 @@ p {
     padding: 1rem 0rem;
 }
 
+.title-page {
+    display: flex;
+    justify-content: space-around;
+}
+
 /* index specific css */
 #title {
+    font-family: 'Spline Sans', sans-serif;
     font-size: 2.8rem;
     text-align: center;
+    margin: 8rem 0rem;
+}
+
+#guess-title {
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 2.8rem;
+    text-align: center;
+    margin: 2rem 0rem;    
 }
 
 #play-game-button {
@@ -56,7 +70,8 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: center;
-
+    max-width: 40rem;
+    padding: 2rem 2rem;
 }
 
 .word {
@@ -89,7 +104,29 @@ p {
 }
 
 .image-cat {
-    margin: 3rem 5rem;
+    margin: 3rem 2rem;
+}
+
+.image-win-lose {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+}
+
+#image-win {
+    max-width: 40rem;
+    max-height: 40rem;
+}
+
+#image-lose {
+    max-width: 40rem;
+    max-height: 40rem;
+}
+
+#image-cat-counter {
+    max-width: 40rem;
+    max-height: 40rem;
 }
 
 #restart-button {
