@@ -8,6 +8,7 @@
 //put break in the keyboard layout
 //put timer on win condition
 //make sure restart game button works correctly and is refreshing through words
+//use init() and render()
 
 /*----- constants -----*/
 const restartButton = document.querySelector('#restart-button');
