@@ -133,3 +133,10 @@ p {
     padding: 0.2rem 1rem;
     margin: 1rem 1rem 1rem 0rem;
 }
+
+/* win page css */
+
+#play-again-button {
+    margin: 2rem;
+    font-size: 1.8rem;
+}

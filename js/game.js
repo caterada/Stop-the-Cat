@@ -8,7 +8,6 @@
 //put break in the keyboard layout
 //put timer on win condition
 //make sure restart game button works correctly and is refreshing through words
-//use init() and render()
 
 /*----- constants -----*/
 const restartButton = document.querySelector('#restart-button');
@@ -470,8 +469,6 @@ wordList = wordList.map(function (word) {
 	return word.toUpperCase();
 });
 
-console.log(wordList);
-
 const imageCat = document.querySelector('#image-cat-counter');
 const letterOne = document.querySelector('#letter-01');
 const letterTwo = document.querySelector('#letter-02');
@@ -595,10 +592,10 @@ function clickButton() {
 		}
 	}
 	if (counter >= 6) {
-		setTimeout(displayLosePage, '4000');
+		setTimeout(displayLosePage, '3000');
 	}
 	if (correctGuessCount === 6) {
-		displayWinPage();
+		setTimeout(displayWinPage, '3000');
 	}
 }
 
@@ -641,3 +638,5 @@ function displayLosePage() {
 function displayWinPage() {
 	document.location.href = '/win.html';
 }
+
+console.log(randomCorrectWord);
