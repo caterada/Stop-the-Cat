@@ -1,7 +1,7 @@
 /* global css */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffe8c7;
+    background-color: #001427;
 }
 .flex-center {
     display: flex;
@@ -29,23 +29,35 @@ p {
     font-size: 2.8rem;
     text-align: center;
     margin: 8rem 0rem;
+    color: #f9b9c3;
 }
 
 #guess-title {
     font-family: 'Spline Sans', sans-serif;
+    color: #708d81;
     font-size: 2.8rem;
     text-align: center;
     margin: 2rem 0rem;    
 }
 
 #play-game-button {
-    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Baloo 2', Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    width: 12rem;
     height: 2.6rem;
+    background-color: #F4D58D;
 }
 
 /* rules page specific css */
 #game-rules-title {
     margin: 5rem;
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 2rem;
+    color:#f9b9c3;
 }
 
 #game-rules-text {
@@ -54,12 +66,22 @@ p {
     flex-wrap: wrap;
     max-width: 30rem;
     padding: 0rem 2rem;
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color:#708D81;
 }
 
 #start-button {
-    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Baloo 2', Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    width: 12rem;
     height: 2.6rem;
-    margin: 5rem 0 0 0;
+    margin: 2rem;
+    background-color: #F4D58D;
 }
 
 /* game specific css */
@@ -68,7 +90,9 @@ p {
 .game-layout-bottom {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     padding: 1rem 2rem;
 }
 
@@ -81,7 +105,7 @@ p {
 .blank-squares {
     margin: 0.2rem;
     padding: 2.2rem 2rem;
-    background-color: white;
+    background-color: #F4D58D;
     font-size: 2rem;
 }
 
@@ -92,6 +116,12 @@ p {
     justify-content: center;
     flex-wrap: wrap;
     margin: 1rem;
+}
+
+@media(min-width: 600px) {
+.keyboard-input {
+    max-width: 30rem;
+}
 }
 
 /* keyboard line break */
@@ -112,16 +142,12 @@ p {
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    background-color: #708D81;
 }
 
 @media (min-width: 600px) {
 .keyboardButtonClass {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 2rem;
-    font-family: 'Baloo 2', cursive;
-    text-decoration: none;
     width: 2.6rem !important;
     height: 2.6rem !important;
 }
@@ -139,13 +165,13 @@ p {
 }
 
 #image-win {
-    max-width: 40rem;
-    max-height: 40rem;
+    max-width: 30rem;
+    max-height: 30rem;
 }
 
 #image-lose {
-    max-width: 40rem;
-    max-height: 40rem;
+    max-width: 30rem;
+    max-height: 30rem;
 }
 
 #image-cat-counter {
@@ -155,8 +181,8 @@ p {
 
 @media (min-width: 600px) {
     #image-cat-counter {
-    max-width: 40rem;
-    max-height: 40rem;
+    max-width: 30rem;
+    max-height: 30rem;
 }
 }
 
@@ -165,12 +191,13 @@ p {
     align-items: center;
     justify-content: center;
     font-size: 1.4rem;
-    font-family: 'Baloo 2', cursive;
+    font-family: 'Baloo 2', Arial, Helvetica, sans-serif;
     text-decoration: none;
     padding: 0.2rem 1rem;
     margin: 1rem 1rem 1rem 0rem;
     max-width: 6rem;
     max-height: 3rem;
+    background-color: #F4D58D;
 }
 
 /* win page css */
@@ -178,4 +205,7 @@ p {
 #play-again-button {
     margin: 2rem;
     font-size: 1.8rem;
+    font-family: 'Baloo 2', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    background-color: #F4D58D;
 }

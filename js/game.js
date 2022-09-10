@@ -1,13 +1,8 @@
-//put more words in word list
-//adjust keys to all caps
 //change key to red when incorrectly pressed
-//green when correct
+//green when correct and make unclickable
 //create new images
-//align buttons correctly
 //make play again button
-//put break in the keyboard layout
-//put timer on win condition
-//make sure restart game button works correctly and is refreshing through words
+//back to rules button
 
 /*----- constants -----*/
 const restartButton = document.querySelector('#restart-button');
