@@ -1,7 +1,7 @@
 /* global css */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #001427;
+    background-color: #f5d7e3;
 }
 .flex-center {
     display: flex;
@@ -20,21 +20,22 @@ p {
 
 .title-page {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
 }
 
 /* index specific css */
-#title {
+.title {
+    display: flex;
+    flex-direction: column;
     font-family: 'Spline Sans', sans-serif;
-    font-size: 2.8rem;
-    text-align: center;
-    margin: 8rem 0rem;
-    color: #f9b9c3;
+    font-size: 4rem;
+    margin: 8rem;
+    color: #a8577e;
 }
 
 #guess-title {
     font-family: 'Spline Sans', sans-serif;
-    color: #708d81;
+    color: #aa7dce;
     font-size: 2.8rem;
     text-align: center;
     margin: 2rem 0rem;    
@@ -45,19 +46,22 @@ p {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Spline Sans', sans-serif;
     font-size: 1.6rem;
     width: 12rem;
     height: 2.6rem;
-    background-color: #F4D58D;
+    padding: 0;
+    border: none;
+    background-color: #F4A5AE;
+    color: white;
 }
 
 /* rules page specific css */
 #game-rules-title {
-    margin: 5rem;
+    margin: 3rem;
     font-family: 'Spline Sans', sans-serif;
-    font-size: 2rem;
-    color:#f9b9c3;
+    font-size: 4rem;
+    color:#F4A5AE;
 }
 
 #game-rules-text {
@@ -68,20 +72,23 @@ p {
     padding: 0rem 2rem;
     font-family: 'Spline Sans', sans-serif;
     font-size: 1.2rem;
-    line-height: 1.4rem;
-    color:#708D81;
+    line-height: 1.6rem;
+    color: #A8577E;
 }
 
 #start-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Spline Sans', sans-serif;
     font-size: 1.6rem;
     width: 12rem;
     height: 2.6rem;
     margin: 2rem;
-    background-color: #F4D58D;
+    padding: 0;
+    border: none;
+    background-color: #F4A5AE;
+    color: white;
 }
 
 /* game specific css */
@@ -105,8 +112,10 @@ p {
 .blank-squares {
     margin: 0.2rem;
     padding: 2.2rem 2rem;
-    background-color: #F4D58D;
-    font-size: 2rem;
+    background-color: #aa7dce;
+    color: white;
+    font-size: 3rem;
+    font-family: 'Lexend Deca', sans-serif;
 }
 
 /* container of the keyboard */
@@ -142,7 +151,9 @@ p {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    background-color: #708D81;
+    border: none;
+    background-color: #F4A5AE;
+    color: white;
 }
 
 @media (min-width: 600px) {
@@ -167,16 +178,19 @@ p {
 #image-win {
     max-width: 30rem;
     max-height: 30rem;
+    border: 0.4rem solid #aa7dce;
 }
 
 #image-lose {
     max-width: 30rem;
     max-height: 30rem;
+    border: 0.4rem solid #aa7dce;
 }
 
 #image-cat-counter {
     max-width: 20rem;
     max-height: 20rem;
+    border: 0.4rem solid #aa7dce;
 }
 
 @media (min-width: 600px) {
@@ -191,21 +205,27 @@ p {
     align-items: center;
     justify-content: center;
     font-size: 1.4rem;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Spline Sans', sans-serif;
     text-decoration: none;
     padding: 0.2rem 1rem;
     margin: 1rem 1rem 1rem 0rem;
     max-width: 6rem;
     max-height: 3rem;
-    background-color: #F4D58D;
+    border: none;
+    background-color: #F4A5AE;
+    color: white;
 }
 
 /* win page css */
 
 #play-again-button {
     margin: 2rem;
-    font-size: 1.8rem;
-    font-family: 'Lexend Deca', sans-serif;
+    max-width: 10rem;
+    max-height: 6rem;
+    font-size: 1.6rem;
+    font-family: 'Spline Sans', sans-serif;
     text-decoration: none;
-    background-color: #F4D58D;
+    border: none;
+    background-color: #F4A5AE;
+    color: white;
 }

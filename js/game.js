@@ -560,36 +560,36 @@ function clickButton() {
 			if (CorrectWordArray[0] === this.innerText) {
 				letterOne.innerHTML = this.innerText;
 				correctGuessCount += 1;
-				this.style.background = '#DDA448';
+				this.style.background = '#92B5AA';
 				this.disabled = 'true';
 			}
 			if (CorrectWordArray[1] === this.innerText) {
 				letterTwo.innerHTML = this.innerText;
 				correctGuessCount += 1;
-				this.style.background = '#DDA448';
+				this.style.background = '#92B5AA';
 				this.disabled = 'true';
 			}
 			if (CorrectWordArray[2] === this.innerText) {
 				letterThree.innerHTML = this.innerText;
 				correctGuessCount += 1;
-				this.style.background = '#DDA448';
+				this.style.background = '#92B5AA';
 				this.disabled = 'true';
 			}
 			if (CorrectWordArray[3] === this.innerText) {
 				letterFour.innerHTML = this.innerText;
 				correctGuessCount += 1;
-				this.style.background = '#DDA448';
+				this.style.background = '#92B5AA';
 				this.disabled = 'true';
 			}
 			if (CorrectWordArray[4] === this.innerText) {
 				letterFive.innerHTML = this.innerText;
 				correctGuessCount += 1;
-				this.style.background = '#DDA448';
+				this.style.background = '#92B5AA';
 				this.disabled = 'true';
 			}
 		} else {
 			incorrectGuessCounter += 1;
-			this.style.background = '#BB342F';
+			this.style.background = '#a8577e';
 			this.disabled = 'true';
 			counterAdd();
 		}
