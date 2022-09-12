@@ -113,11 +113,18 @@ p {
 
 .blank-squares {
     margin: 0.2rem;
-    padding: 2.2rem 2rem;
+    padding: 1.5rem 1.2rem;
     background-color: #aa7dce;
     color: white;
-    font-size: 3rem;
+    font-size: 1.8rem;
     font-family: 'Lexend Deca', sans-serif;
+}
+
+@media (min-width: 600px) {
+    .blank-squares {
+        padding: 2.2rem 2rem;
+        font-size: 3rem;
+    }
 }
 
 /* container of the keyboard */
