@@ -652,5 +652,5 @@ function backToRulesPage() {
 	document.location.href = '/rules.html';
 }
 
-//delete later
-console.log(randomCorrectWord);
+// //console log checks
+// console.log(randomCorrectWord);
