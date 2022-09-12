@@ -29,8 +29,8 @@ AAP, I want to be able to access the game anywhere I’m online, so I can play w
 
 ## Wireframes:
 
-![embedded screenshot of Stop the Cat! wireframe 01](https://stop-the-cat.netlify.app/images/wireframe-01.jpeg)
-![embedded screenshot of Stop the Cat! wireframe 02](https://stop-the-cat.netlify.app/images/wireframe-02.jpeg)
+![embedded screenshot of Stop the Cat! wireframe 01](https://stop-the-cat.netlify.app/images/wireframe01.jpeg)
+![embedded screenshot of Stop the Cat! wireframe 02](https://stop-the-cat.netlify.app/images/wireframe02.jpeg)
 
 ## Major hurdles:
 
