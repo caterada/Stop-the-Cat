@@ -22,7 +22,7 @@ wordList = wordList.map(function (word) {
 });
 
 //counters
-let counter = 0;
+let incorrectGuessCounter = 0;
 let correctGuessCount = 0;
 
 //keyboard
@@ -81,8 +81,7 @@ let CorrectWordObject = new CorrectWordClass(
 	CorrectWordArray[1],
 	CorrectWordArray[2],
 	CorrectWordArray[3],
-	CorrectWordArray[4],
-	CorrectWordArray[5]
+	CorrectWordArray[4]
 );
 
 /*----- event listeners -----*/
@@ -101,7 +100,7 @@ function pickRandomWord() {
 
 //if button ID = a letter in the array of correct word, replace innertext with that letter. if not, move the incorrect counter up (image changes)
 function clickButton() {
-	if (counter < 6) {
+	if (incorrectGuessCounter < 6) {
 		if (randomCorrectWord.includes(this.innerText)) {
 			//could be a for loop?
 			if (CorrectWordArray[0] === this.innerText) {
@@ -129,7 +128,7 @@ function clickButton() {
 			counterAdd();
 		}
 	}
-	if (counter >= 5) {
+	if (incorrectGuessCounter >= 5) {
 		setTimeout(displayLosePage, '3000');
 	}
 	if (correctGuessCount === 5) {
@@ -138,32 +137,32 @@ function clickButton() {
 }
 
 function counterAdd() {
-	if (counter === 1) {
+	if (incorrectGuessCounter === 1) {
 		imageCat.src = 'images/cat-image01.jpg';
 		imageCat.alt = 'cat climbed up 1st flight of stairs';
 	}
 
-	if (counter === 2) {
+	if (incorrectGuessCounter === 2) {
 		imageCat.src = 'images/cat-image02.jpg';
 		imageCat.alt = 'cat climbed up 2nd flight of stairs';
 	}
 
-	if (counter === 3) {
+	if (incorrectGuessCounter === 3) {
 		imageCat.src = 'images/cat-image03.jpg';
 		imageCat.alt = 'cat climbed up 3rd flight of stairs';
 	}
 
-	if (counter === 4) {
+	if (incorrectGuessCounter === 4) {
 		imageCat.src = 'images/cat-image04.jpg';
 		imageCat.alt = 'cat climbed up 4th flight of stairs';
 	}
 
-	if (counter === 5) {
+	if (incorrectGuessCounter === 5) {
 		imageCat.src = 'images/cat-image05.jpg';
 		imageCat.alt = 'cat climbed up 5th flight of stairs';
 	}
 
-	if (counter === 6) {
+	if (incorrectGuessCounter === 6) {
 		imageCat.src = 'images/cat-image06.jpg';
 		imageCat.alt = 'cat climbed up 6th flight of stairs';
 	}
