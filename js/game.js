@@ -6,6 +6,7 @@
 
 /*----- constants -----*/
 const restartButton = document.querySelector('#restart-button');
+const backButton = document.querySelector('#back-button');
 const imageCat = document.querySelector('#image-cat-counter');
 const letterOne = document.querySelector('#letter-01');
 const letterTwo = document.querySelector('#letter-02');
@@ -538,6 +539,7 @@ let CorrectWordObject = new CorrectWordClass(
 
 /*----- event listeners -----*/
 restartButton.addEventListener('click', restartGame);
+backButton.addEventListener('click', backToRulesPage);
 
 /*----- functions -----*/
 function restartGame() {
@@ -644,6 +646,10 @@ function displayLosePage() {
 
 function displayWinPage() {
 	document.location.href = '/win.html';
+}
+
+function backToRulesPage() {
+	document.location.href = '/rules.html';
 }
 
 //delete later
