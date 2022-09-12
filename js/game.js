@@ -1,9 +1,3 @@
-//change key to red when incorrectly pressed
-//green when correct and make unclickable
-//create new images
-//make play again button
-//back to rules button
-
 /*----- constants -----*/
 const restartButton = document.querySelector('#restart-button');
 const backButton = document.querySelector('#back-button');
@@ -15,7 +9,6 @@ const letterFour = document.querySelector('#letter-04');
 const letterFive = document.querySelector('#letter-05');
 
 /*----- app's state (variables) -----*/
-//keyboard values
 let wordList = [
 	'actor',
 	'acute',
@@ -434,7 +427,6 @@ let wordList = [
 	'teach',
 	'teeth',
 	'terry',
-	'texas',
 	'thank',
 	'theft',
 	'their',
