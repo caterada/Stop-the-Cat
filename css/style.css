@@ -45,7 +45,7 @@ p {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-family: 'Baloo 2', Arial, Helvetica, sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
     font-size: 1.6rem;
     width: 12rem;
     height: 2.6rem;
@@ -76,7 +76,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Baloo 2', Arial, Helvetica, sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
     font-size: 1.6rem;
     width: 12rem;
     height: 2.6rem;
@@ -135,10 +135,10 @@ p {
     padding: 0.1rem;
 }
 
-.keyboardButtonClass {
+.keyboard-button-class {
     display: flex;
     font-size: 1.4rem;
-    font-family: 'Baloo 2', cursive;
+    font-family: 'Lexend Deca', sans-serif;
     align-items: center;
     justify-content: center;
     text-decoration: none;
@@ -146,7 +146,7 @@ p {
 }
 
 @media (min-width: 600px) {
-.keyboardButtonClass {
+.keyboard-button-class {
     font-size: 2rem;
     width: 2.6rem !important;
     height: 2.6rem !important;
@@ -191,7 +191,7 @@ p {
     align-items: center;
     justify-content: center;
     font-size: 1.4rem;
-    font-family: 'Baloo 2', Arial, Helvetica, sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
     text-decoration: none;
     padding: 0.2rem 1rem;
     margin: 1rem 1rem 1rem 0rem;
@@ -205,7 +205,7 @@ p {
 #play-again-button {
     margin: 2rem;
     font-size: 1.8rem;
-    font-family: 'Baloo 2', Arial, Helvetica, sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
     text-decoration: none;
     background-color: #F4D58D;
 }

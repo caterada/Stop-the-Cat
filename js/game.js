@@ -35,7 +35,7 @@ for (let i = 0; i < arrayOfKeys.length; i++) {
 	let keyboardButton = document.createElement('button');
 	keyboardButton.type = 'button';
 	keyboardButton.innerText = arrayOfKeys[i];
-	keyboardButton.classList = 'keyboardButtonClass';
+	keyboardButton.classList = 'keyboard-button-class';
 	keyboardButton.id = arrayOfKeys[i];
 	keyboardButton.style.width = '2rem';
 	keyboardButton.style.height = '2rem';
@@ -106,25 +106,37 @@ function clickButton() {
 			if (CorrectWordArray[0] === this.innerText) {
 				letterOne.innerHTML = this.innerText;
 				correctGuessCount += 1;
+				this.style.background = '#DDA448';
+				this.disabled = 'true';
 			}
 			if (CorrectWordArray[1] === this.innerText) {
 				letterTwo.innerHTML = this.innerText;
 				correctGuessCount += 1;
+				this.style.background = '#DDA448';
+				this.disabled = 'true';
 			}
 			if (CorrectWordArray[2] === this.innerText) {
 				letterThree.innerHTML = this.innerText;
 				correctGuessCount += 1;
+				this.style.background = '#DDA448';
+				this.disabled = 'true';
 			}
 			if (CorrectWordArray[3] === this.innerText) {
 				letterFour.innerHTML = this.innerText;
 				correctGuessCount += 1;
+				this.style.background = '#DDA448';
+				this.disabled = 'true';
 			}
 			if (CorrectWordArray[4] === this.innerText) {
 				letterFive.innerHTML = this.innerText;
 				correctGuessCount += 1;
+				this.style.background = '#DDA448';
+				this.disabled = 'true';
 			}
 		} else {
-			counter += 1;
+			incorrectGuessCounter += 1;
+			this.style.background = '#BB342F';
+			this.disabled = 'true';
 			counterAdd();
 		}
 	}
