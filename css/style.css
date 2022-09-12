@@ -178,27 +178,35 @@ p {
 }
 
 #image-win {
-    max-width: 30rem;
-    max-height: 30rem;
+    width: 20rem;
+    height: 20rem;
     border: 0.4rem solid #aa7dce;
 }
 
 #image-lose {
-    max-width: 30rem;
-    max-height: 30rem;
+    width: 20rem;
+    height: 20rem;
     border: 0.4rem solid #aa7dce;
 }
 
 #image-cat-counter {
-    max-width: 20rem;
-    max-height: 20rem;
+    width: 20rem;
+    height: 20rem;
     border: 0.4rem solid #aa7dce;
 }
 
 @media (min-width: 600px) {
     #image-cat-counter {
-    max-width: 30rem;
-    max-height: 30rem;
+    width: 30rem;
+    height: 30rem;
+}
+    #image-win {
+    width: 30rem;
+    height: 30rem;
+}
+    #image-lose {
+    width: 30rem;
+    height: 30rem;
 }
 }
 
